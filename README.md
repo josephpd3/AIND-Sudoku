@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?
-A: *Student should provide answer here*
+A: Like the Elimination strategy, the purpose of Naked Twins (NT) is to eliminate possible choices from the peers of given boxes. With this in mind, it was ideal to utilize the NT strategy in the `reduce_puzzle` loop--alongside Elimination and Only Choice--so that the constraints applied on each iteration both lent to and included those imposed by NT. That is, the reduced puzzle from one iteration lent to the relevance and success of NT in the next iteration.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?
-A: *Student should provide answer here*
+A: In the adjustments to the implementation for a standard sudoku board, one may simply add the diagonal units to the board so that the peers of respective boxes within them may have the same constraints applied to them as the peers of boxes within standard units (3x3, horizontal, vertical). Given this consideration, we simply augment our strategies which work across all units to consider these diagonal units as well--adding to the constraints which they apply iteratively through propagation.
 
 ### Install
 

@@ -7,6 +7,7 @@ after_naked_twins = {'G7': '6', 'G6': '3', 'G5': '2', 'G4': '9', 'G3': '1', 'G2'
 
 class TestNakedTwins(unittest.TestCase):
     def test_naked_twins(self):
+        self.maxDiff = None
         self.assertEqual(solution.naked_twins(before_naked_twins), after_naked_twins)
 
 
@@ -15,6 +16,7 @@ solved_diag_sudoku = {'G7': '8', 'G6': '9', 'G5': '7', 'G4': '3', 'G3': '2', 'G2
 
 class TestDiagonalSudoku(unittest.TestCase):
     def test_solve(self):
+        self.maxDiff = None
         self.assertEqual(solution.solve(diagonal_grid), solved_diag_sudoku)
 
 if __name__ == '__main__':
